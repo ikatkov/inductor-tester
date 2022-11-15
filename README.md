@@ -2,14 +2,18 @@
 
 ~60A max current. Power supply 5-25V.
 Based on http://elm-chan.org/works/lchk/report.html
+
 You will need an oscilloscope to take measurements.
 
 
 # Theory
 
 Once powered, the capacitor bank charges up. The circuit fires off a variable-width pulse into the MOSFET gate. MOSFET turns ON and short-circuits the inductor to the capacitor power bank. The current starts to rise linearly until the saturation point is reached. Once the inductor is saturated, it behaves like an ohmic piece of wire, and the current increases exponentially until the pulse is over, and the MOSFET is switched OFF. Saturation is a knee, not a sharp point. So you have some wiggle room in what current you designate as a "saturation current." Before the saturation point and including the "knee region," inductance will be higher than labeled. Once saturated sufficiently - inductance will drop.
+
 Commercial manufacturers pick the point where a power inductor loses 20-30% of its labeled inductance. One can safely operate inductors at x1.3-1.5 their knee point.
+
 You take voltage drop measurements across 0.1 Ohm resistor, multiply by 10 and get current in Amps flowing through your inductor under test. `I = V*10`
+
 You can also compute actual inductance be taking your supply voltage and dividing by the voltage slope. 
 `L = Vs * Δt / ΔI`. 
 
