@@ -17,6 +17,7 @@ You can also compute actual inductance be taking your supply voltage and dividin
 
 See "sort-of" instructions video https://www.youtube.com/watch?v=3Y_WcuIenSM
 Notice that although their PCB is labeled 1us..50us. It's impossible to get a positive pulse width of less than 10uS with NE555. One can replace it with other astable timers ICs, but you need a separate MOSFET driving circuitry. NE555 raising and falling times ~350ns, with a max current of 200mA, which is not enough to quickly switch power MOSFETs ON/OFF. The MOSFET will be in its linear region for some time. Therefore the trigger pulse is set to ~50Hz, letting MOSFET cool down between pulses. Also, notice that the current sense shunt, capacitor bank ESR and traces resistance limits max current to ~56A.
+You would want to rig some sort of replacable solder-pads on the top of the PCB, so you can finger-press small SMD inductors to it and solder large ones to take measurements. There are header holes for this.
 
 * Unplug the power
 * Turn the potentiometer all the way counterclockwise. Set the duration selector jumper to the shortest range. 
