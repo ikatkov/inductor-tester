@@ -42,8 +42,6 @@ You would want to rig some sort of replacable solder-pads on the top of the PCB,
 * If you still see a linear ramp, unplug, change the duration selector jumper to the next position, turn the potentiometer all the way counterclockwise and repeat
 * Take measurements
 
-![Knee](knee.jpg)
-
 ![Schematic](schematic.jpg)
 
 # Manufacturing
@@ -54,5 +52,5 @@ You would want to rig some sort of replacable solder-pads on the top of the PCB,
 ![Enclosure](enclosure3d.jpg)
 [PCB STEP model](main.step)
 [Full STEP model](enclosure.step)
-[Full Fusion360 model](enclosure.f3z)
+[Full Fusion360 model](enclosure.f3zki)ddedcc
 
