@@ -50,7 +50,10 @@ You would want to rig some sort of replacable solder-pads on the top of the PCB,
 ![Top view](pcb3d.jpg)
 
 ![Enclosure](enclosure3d.jpg)
+
 [PCB STEP model](main.step)
+
 [Full STEP model](enclosure.step)
-[Full Fusion360 model](enclosure.f3zki)ddedcc
+
+[Full Fusion360 model](enclosure.f3zki)
 
