@@ -57,3 +57,11 @@ You would want to rig some sort of replacable solder-pads on the top of the PCB,
 
 [Full Fusion360 model](enclosure.f3zki)
 
+# Future improvements
+
+NE555 is a compromise for this project purpose, you need two of them to deliver a short pulse, but it can also source 200ma current by itself. An alternative design is to use a cheap MCU and a MOSFET driver. Same PCB footprint, but better timing (no need to mess around with jumpers) and higher currents to turn the MOSFET on and off. With a better MCU one can even do automatic pulse control. This gets complex fast. 16 MHz Arduino is ~ 100uS per ADC sample. 
+
+`For a 16 MHz Arduino the ADC clock is set to 16 MHz/128 = 125 KHz. Each conversion in AVR takes 13 ADC clocks so 125 KHz /13 = 9615 Hz.`
+
+As soon as you consider a fast external ADC, you start worry about crystal clock-jitter, temperature drift and SPI speed.
+
