@@ -57,9 +57,12 @@ You would want to rig some sort of replacable solder-pads on the top of the PCB,
 
 [Full Fusion360 model](enclosure.f3zki)
 
+[PCB Thermal Heat Flow Analysis](heat.jpg)
+
 # Future improvements
 
-NE555 is a compromise for this project purpose, you need two of them to deliver a short pulse, but it can also source 200ma current by itself. An alternative design is to use a cheap MCU and a MOSFET driver. Same PCB footprint, but better timing (no need to mess around with jumpers) and higher currents to turn the MOSFET on and off. With a better MCU one can even do automatic pulse control. This gets complex fast. 16 MHz Arduino is ~ 100uS per ADC sample. 
+NE555 is a compromise for this project purpose, you need two of them to deliver a short pulse, but it can also source 200ma current by itself. An alternative design is to use a cheap MCU and a MOSFET driver. Same PCB footprint, but better timing (no need to mess around with jumpers) and higher currents to turn the MOSFET on and off. High gate current also means "ringing" 
+on MOSFET turn on, which in turn manifests itself as current measurements ringing. For large inductors it is OK, for small (SMD) it might be hard to take measurements. With a better MCU one can even do automatic pulse control. This gets complex fast. 16 MHz Arduino is ~ 100uS per ADC sample. 
 
 `For a 16 MHz Arduino the ADC clock is set to 16 MHz/128 = 125 KHz. Each conversion in AVR takes 13 ADC clocks so 125 KHz /13 = 9615 Hz.`
 
